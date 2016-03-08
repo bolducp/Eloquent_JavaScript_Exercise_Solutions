@@ -21,3 +21,16 @@ function isEven(N) {
     else
         return isEven(N-2);
 }
+
+// alternatively:
+
+function isEven2(num) {
+    num = Math.abs(num);
+
+    if (num === 0)
+        return true;
+    else if (num === 1)
+        return false;
+    else
+        return isEven2(num - 2);
+}
